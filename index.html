@@ -13,6 +13,8 @@
         opacity: 1;
         filter: brightness(1.2) contrast(1.3);
         animation: splashAnim 1.6s ease-out forwards;
+        will-change: transform, opacity;
+        transform: translate3d(0, 0, 0);
       }
 
       @keyframes splashAnim {
@@ -299,10 +301,6 @@
           isSplash = false;
         }
       });
-
-      /*document.addEventListener("click", function (event) {
-        createSplash(event.clientX, event.clientY);
-      });*/
 
       function createSplash(x, y) {
         const splash = document.createElement("div");
